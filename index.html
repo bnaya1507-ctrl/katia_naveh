@@ -23,7 +23,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -76,8 +76,9 @@
         .credentials-list li {
             position: relative;
             padding-right: 25px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-weight: 500;
+            font-size: 1.05rem;
         }
 
         .credentials-list li::before {
@@ -85,42 +86,6 @@
             position: absolute;
             right: 0;
             color: var(--primary-color);
-        }
-
-        /* עיצוב גלריית לפני ואחרי */
-        .gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 600px) {
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .gallery-item {
-            background: var(--bg-color);
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid #eae1d4;
-        }
-
-        .gallery-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .gallery-item p {
-            margin: 12px 0 0 0;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--accent-color);
         }
 
         /* עיצוב כפתורי ההנעה לפעולה */
@@ -138,7 +103,7 @@
 
         .btn {
             display: inline-block;
-            width: 80%;
+            width: 85%;
             max-width: 320px;
             padding: 16px 30px;
             font-size: 1.15rem;
@@ -200,39 +165,24 @@
 
     <div class="container">
 
-        <!-- חלק אודות מקצועי מבוסס על המידע האמיתי -->
+        <!-- חלק אודות מקצועי מבוסס על המידע האמיתי מהאינסטגרם -->
         <section id="about">
             <h2>מומחיות רפואית ומקצועיות ללא פשרות</h2>
             <p>כשמדובר בעור הפנים שלך, את רוצה לדעת שאת נמצאת בידיים הבטוחות והמקצועיות ביותר. בקליניקה של קטיה נווה הטיפולים מבוצעים תחת אבחון קליני מעמיק, תוך התחשבות במצב הרפואי, תרופות, אורח חיים ואיזון הורמונלי, כדי להבטיח מקסימום תוצאה במינימום סיכון.</p>
             
             <ul class="credentials-list">
-                <li>אחות מוסמכת מומחית לפיזיולוגיה של תהליכי ריפוי פצע (40 שנות ניסיון, כולל השתלמויות רפואיות בישראל, ארה"ב, גרמניה וצרפת).</li>
-                <li>קוסמטולוגית חוקרת ובכירה מעל 30 שנה.</li>
-                <li>מומחית לטכנולוגיית פלאזמה פיזית לא חודרנית NIPP.</li>
-                <li>מפתחת שיטות הטיפול המתקדמות MTT ושיטת M.A.O.R.</li>
+                <li>אחות מוסמכת מומחית לפיזיולוגיה של תהליכי ריפוי פצע (40 שנות ניסיון, כולל השתלמויות רפואיות בישראל, ארה"ב, גרמניה וצרפת)[cite: 1].</li>
+                <li>קוסמטולוגית חוקרת ובכירה מעל 30 שנה[cite: 1].</li>
+                <li>מומחית לטכנולוגיית פלאזמה פיזית לא חודרנית NIPP[cite: 1].</li>
+                <li>M.A.O.R. ומפתחת שיטות הטיפול המתקדמות MTT[cite: 1].</li>
             </ul>
-        </section>
-
-        <!-- חלק תוצאות לפני ואחרי -->
-        <section id="results">
-            <h2>תוצאות ותהליכי שיקום מהקליניקה</h2>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="before-after1.jpeg" alt="שיקום מרקם העור">
-                    <p>חידוש מרקם העור וטשטוש פגמים</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="before-after2.jpeg" alt="טיפול פלאזמה מתקדמת">
-                    <p>טיפולי פלאזמה סובלימציה מדויקים</p>
-                </div>
-            </div>
         </section>
 
         <!-- חלק מיקום -->
         <section id="location">
             <h2>מיקום הקליניקה</h2>
-            <p>הטיפולים מתבצעים בקליניקה מקצועית, המצוידת במכשירים בעלי תקנים קפדניים ואישורים מבוקרים.</p>
-            <p><strong>כתובת:</strong> [פתח תקווה, מוטה גור בניין B קומה 4]</p>
+            <p>הטיפולים מתבצעים בקליניקה מקצועית, המצוידת במכשירים בעלי תקנים קפדניים ואישורים מבוקרים[cite: 1].</p>
+            <p><strong>כתובת:</strong> [הכניסי כאן את הרחוב והעיר שבה הקליניקה נמצאת, למשל: ראשון לציון]</p>
         </section>
 
         <!-- חלק התקשרות מהיר ומעודכן -->
@@ -241,19 +191,19 @@
             
             <div class="btn-group">
                 <!-- כפתור וואטסאפ עם הודעה מוכנה מראש -->
-                <a href="https://wa.me/972524242852?text=%D7%94%D7%99%D7%99%20%D7%A7%D7%98%D7%99%D7%94%D7%9C%2C%20%D7%90%D7%A9%D7%94%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A5%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%A4%D7%A0%D7%99%D7%9D%20%D7%95%D7%A4%D7%9C%D7%90%D7%96%D7%9E%D7%94" target="_blank" class="btn btn-whatsapp">💬 שליחת הודעת WhatsApp</a>
+                <a href="https://wa.me/972524242852?text=%D7%94%D7%99%D7%99%20%D7%A7%D7%98%D7%99%D7%94%2C%20%D7%90%D7%A9%D7%97%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A5%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%A4%D7%A0%D7%99%D7%9D%20%D7%95%D7%A4%D7%9C%D7%90%D7%96%D7%9E%D7%94" target="_blank" class="btn btn-whatsapp">💬 שליחת הודעת WhatsApp</a>[cite: 1]
                 
                 <!-- כפתור חיוג ישיר מהנייד -->
-                <a href="tel:0524242852" class="btn btn-call">📱 לחצי כאן לחיוג ישיר</a>
+                <a href="tel:0524242852" class="btn btn-call">📱 לחצי כאן לחיוג ישיר</a>[cite: 1]
             </div>
             
-            <a href="https://www.instagram.com/global_education_katia_naveh" target="_blank" class="social-link">לצפייה בפוסטים נוספים באינסטגרם של קטיה</a>
+            <a href="https://www.instagram.com/global_education_katia_naveh" target="_blank" class="social-link">לצפייה בפוסטים נוספים באינסטגרם של קטיה</a>[cite: 1]
         </div>
 
     </div>
 
     <footer>
-        <p>© כל הזכויות שמורות לקטיה נווה — קליניקה לטיפולי עור מתקדמים</p>
+        <p>© כל הזכויות שמורות לקטיה נווה — קליניקה לטיפולי עור מתקדמים</p>[cite: 1]
     </footer>
 
 </body>
