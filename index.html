@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KATIA NAVEH | CLINIC</title>
+    <title>Katia Naveh | הקליניקה לטיפולים קוסמטיים מתקדמים</title>
     <style>
         :root {
-            --rose-nude-bg: #f7ede2; 
-            --luxury-gold: #c5a880; 
-            --dark-charcoal: #1e1e1e; 
+            --bg-clean: #fcfdfe; 
+            --dark-luxury: #111111;
             --pure-white: #ffffff;
             --text-dark: #2c2c2c;
+            --teal-accent: #007a87; /* טורקיז מטאלי יוקרתי תואם ללוגו החדש */
+            --teal-light: rgba(0, 122, 135, 0.1);
         }
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--rose-nude-bg);
+            background-color: var(--bg-clean);
             color: var(--text-dark);
             margin: 0;
             padding: 0;
@@ -29,44 +30,67 @@
             padding: 20px;
         }
 
+        /* אזור הכותרת והלוגו החדש */
         header {
-            padding: 60px 20px 30px 20px;
+            padding: 50px 20px 20px 20px;
+        }
+
+        .logo-container {
+            margin: 0 auto 30px auto;
+            max-width: 320px;
+            width: 100%;
+        }
+
+        .logo-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
         }
 
         header h1 {
             margin: 0;
-            color: var(--dark-charcoal);
-            font-size: 3rem;
-            letter-spacing: 6px;
-            font-weight: 300;
+            color: var(--dark-luxury);
+            font-size: 2.8rem;
+            letter-spacing: 4px;
+            font-weight: 400;
             text-transform: uppercase;
+            font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif, sans-serif;
         }
 
-        header .subtitle {
+        header .subtitle-en {
             font-size: 1rem;
-            color: var(--dark-charcoal);
+            color: var(--dark-luxury);
             margin-top: 12px;
             font-weight: 400;
             letter-spacing: 2px;
             opacity: 0.8;
         }
 
+        header .subtitle-he {
+            font-size: 1.2rem;
+            color: var(--teal-accent);
+            margin-top: 8px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* תמונת הפרופיל של קטיה */
         .profile-container {
             margin: 10px auto 30px auto;
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--pure-white);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             background-color: var(--pure-white);
         }
 
@@ -74,16 +98,16 @@
             background: var(--pure-white);
             padding: 40px 30px;
             margin: 25px 0;
-            border-radius: 16px; 
-            box-shadow: 0 10px 30px rgba(197, 168, 128, 0.1); 
-            border: 1px solid rgba(197, 168, 128, 0.2);
+            border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0, 122, 135, 0.04); 
+            border: 1px solid #eef4f5;
             text-align: right;
         }
 
         h2 {
-            color: var(--dark-charcoal);
+            color: var(--dark-luxury);
             font-weight: 500;
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             margin-top: 0;
             margin-bottom: 20px;
             position: relative;
@@ -95,9 +119,9 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 50px;
+            width: 40px;
             height: 2px;
-            background-color: var(--luxury-gold);
+            background-color: var(--teal-accent);
         }
 
         section p {
@@ -124,7 +148,7 @@
             content: "✦";
             position: absolute;
             right: 0;
-            color: var(--luxury-gold);
+            color: var(--teal-accent);
         }
 
         .cta-section {
@@ -153,9 +177,9 @@
         }
 
         .btn-call {
-            background-color: var(--dark-charcoal);
+            background-color: var(--dark-luxury);
             color: var(--pure-white);
-            border: 1px solid var(--dark-charcoal);
+            border: 1px solid var(--dark-luxury);
         }
 
         .btn-call:hover {
@@ -166,7 +190,7 @@
         .phone-display {
             font-size: 1.2rem;
             font-weight: bold;
-            color: var(--dark-charcoal);
+            color: var(--dark-luxury);
             margin-top: -5px;
             margin-bottom: 5px;
             letter-spacing: 1px;
@@ -197,10 +221,10 @@
 
         footer {
             padding: 40px 20px;
-            color: var(--dark-charcoal);
+            color: var(--dark-luxury);
             font-size: 0.8rem;
             letter-spacing: 1px;
-            opacity: 0.6;
+            opacity: 0.5;
             margin-top: 40px;
         }
     </style>
@@ -208,41 +232,51 @@
 <body>
 
     <header>
-        <h1>KATIA NAVEH</h1>
-        <div class="subtitle">CLINIC FOR ADVANCED SKIN TREATMENTS</div>
+        <!-- אזור הלוגו החדש -->
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="Katia Naveh Global Esthetics" class="logo-img" onerror="this.style.display='none'">
+        </div>
+        <h1>Katia Naveh</h1>
+        <div class="subtitle-en">CLINIC FOR ADVANCED SKIN TREATMENTS</div>
+        <div class="subtitle-he">הקליניקה לטיפולים קוסמטיים מתקדמים בהתאמה אישית</div>
     </header>
 
     <div class="container">
 
+        <!-- תמונת הפרופיל של קטיה -->
         <div class="profile-container">
             <img src="katia.jpeg" alt="Katia Naveh" class="profile-img" onerror="this.style.opacity='0'; this.style.height='0'; this.parentNode.style.height='0'; this.parentNode.style.margin='0';">
         </div>
 
+        <!-- אודות -->
         <section id="about">
             <h2>מומחיות רפואית ומקצועיות ללא פשרות</h2>
             <p>כשמדובר בעור הפנים שלך, את רוצה לדעת שאת נמצאת בידיים הבטוחות והמקצועיות ביותר. בקליניקה של קטיה נווה הטיפולים מבוצעים תחת אבחון קליני מעמיק, תוך התחשבות במצב הרפואי, תרופות, אורח חיים ואיזון הורמונלי, כדי להבטיח מקסימום תוצאה במינימום סיכון.</p>
             
             <ul class="credentials-list">
-                <li>אחות מוסמכת מומחית לפיזיולוגיה של תהליכי ריפוי פצע (40 שנות ניסיון, כולל השתלמויות רפואיות בישראל, ארה"ב, גרמניה וצרפת).</li>
+                <li>A.N אחות מוסמכת מומחית לפיזיולוגיה של תהליכי ריפוי פצע (40 שנות ניסיון, כולל השתלמויות רפואיות בישראל, ארה"ב, גרמניה וצרפת).</li>
                 <li>קוסמטולוגית חוקרת ובכירה מעל 30 שנה.</li>
                 <li>מומחית לטכנולוגיית פלאזמה פיזית לא חודרנית NIPP.</li>
                 <li>מפתחת שיטות הטיפול המתקדמות MTT ושיטת M.A.O.R.</li>
             </ul>
         </section>
 
+        <!-- מיקום -->
         <section id="location">
             <h2>הקליניקה</h2>
             <p>הטיפולים מתבצעים בקליניקה מקצועית ופרטית, המצוידת במכשירים בעלי תקנים קפדניים ואישורים מבוקרים.</p>
             <p><strong>כתובת:</strong> פתח תקווה, מוטה גור 9</p>
         </section>
 
+        <!-- יצירת קשר ואינסטגרם -->
         <div class="cta-section">
             <div class="btn-group">
                 <a href="tel:0524242852" class="btn btn-call">📱 לחצי כאן לחיוג ישיר</a>
                 <div class="phone-display">052-424-2852</div>
 
                 <a href="https://wa.me/972524242852?text=%D7%94%D7%99%D7%99%20%D7%A7%D7%98%D7%99%D7%94%2C%20%D7%90%D7%A9%D7%97%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A5%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%A4%D7%A0%D7%99%D7%9D%20%D7%95%D7%A4%D7%9C%D7%90%D7%96%D7%9E%D7%94" target="_blank" class="btn btn-whatsapp">💬 הודעת WhatsApp מהירה</a>
-                <a href="https://www.instagram.com/global_education_katia_naveh" target="_blank" class="btn btn-instagram">📸 עקבי באינסטגרם: global_education_katia_naveh</a>
+                
+                <a href="https://www.instagram.com/katianaveh_clinic_pt" target="_blank" class="btn btn-instagram">📸 עקבי באינסטגרם: katianaveh_clinic_pt</a>
             </div>
         </div>
 
