@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>קטיה נווה - קליניקה לטיפולי עור מתקדמים</title>
+    <title>קטיה נווה - קליניקה לטיפולי עור מתקדמים ופלזמה</title>
     <style>
         :root {
-            --primary-color: #d4af37; /* צבע זהב מעודן */
-            --bg-color: #faf8f5; /* צבע רקע קרם בהיר ונקי */
-            --text-color: #333;
+            --primary-color: #c5a880; /* זהב מעודן */
+            --bg-color: #faf7f2; /* רקע שמנת יוקרתי */
+            --text-color: #2c2c2c;
+            --accent-color: #1a1a1a;
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            text-align: center;
         }
 
         .container {
@@ -27,37 +29,62 @@
         }
 
         header {
-            text-align: center;
-            padding: 40px 20px;
-            background: #fff;
-            border-bottom: 1px solid #eee;
+            padding: 60px 20px;
+            background: #ffffff;
+            border-bottom: 1px solid #eae1d4;
         }
 
         header h1 {
             margin: 0;
-            color: var(--primary-color);
-            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-size: 2.3rem;
+            letter-spacing: 1px;
+            font-weight: 600;
         }
 
         header p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-top: 10px;
+            font-size: 1.1rem;
+            color: #767676;
+            margin-top: 15px;
+            font-weight: 300;
         }
 
         section {
-            background: #fff;
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background: #ffffff;
+            padding: 35px 25px;
+            margin: 25px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid #f0e9df;
+            text-align: right;
         }
 
         h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--bg-color);
-            padding-bottom: 10px;
+            color: var(--accent-color);
+            border-bottom: 1px solid #eae1d4;
+            padding-bottom: 12px;
             margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .credentials-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+
+        .credentials-list li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .credentials-list li::before {
+            content: "✦";
+            position: absolute;
+            right: 0;
+            color: var(--primary-color);
         }
 
         /* עיצוב גלריית לפני ואחרי */
@@ -76,84 +103,127 @@
 
         .gallery-item {
             background: var(--bg-color);
-            padding: 10px;
-            border-radius: 6px;
+            padding: 12px;
+            border-radius: 8px;
             text-align: center;
+            border: 1px solid #eae1d4;
         }
 
         .gallery-item img {
             max-width: 100%;
             height: auto;
-            border-radius: 4px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .gallery-item p {
-            margin: 10px 0 0 0;
-            font-size: 0.9rem;
-            font-weight: bold;
+            margin: 12px 0 0 0;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--accent-color);
         }
 
-        /* עיצוב כפתור ההתקשרות */
+        /* עיצוב כפתורי ההנעה לפעולה */
         .cta-section {
-            text-align: center;
             padding: 40px 20px;
         }
 
-        .btn-call {
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .btn {
             display: inline-block;
-            background-color: #25D366; /* ירוק בולט (או שנה לזהב/שחור לפי הטעם) */
-            color: white;
-            padding: 15px 35px;
-            font-size: 1.3rem;
-            font-weight: bold;
+            width: 80%;
+            max-width: 320px;
+            padding: 16px 30px;
+            font-size: 1.15rem;
+            font-weight: 600;
             text-decoration: none;
             border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            transition: transform 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba56;
+            transform: translateY(-2px);
+        }
+
+        .btn-call {
+            background-color: #1a1a1a;
+            color: white;
         }
 
         .btn-call:hover {
-            transform: scale(1.05);
+            background-color: #333333;
+            transform: translateY(-2px);
+        }
+
+        .social-link {
+            display: block;
+            margin-top: 25px;
+            color: #767676;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        
+        .social-link:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
-            color: #999;
+            padding: 30px 20px;
+            color: #b5b5b5;
             font-size: 0.85rem;
+            border-top: 1px solid #eae1d4;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>קטיה נווה | Katia Naveh</h1>
-        <p>טיפולי פנים מתקדמים, אקנה, אנטי-אייג'ינג ושיקום העור בהתאמה אישית</p>
+        <h1>קטיה נווה | קליניקה לטיפולי עור מתקדמים</h1>
+        <p>טיפול פלאזמה סובלימציה ושיקום העור בסטנדרט רפואי מדויק</p>
     </header>
 
     <div class="container">
 
-        <!-- חלק אודות -->
+        <!-- חלק אודות מקצועי מבוסס על המידע האמיתי -->
         <section id="about">
-            <h2>מי אני ומה אני עושה</h2>
-            <p>נעים להכיר, אני קטיה, קוסמטיקאית ומטפלת בעור. בקליניקה שלי אני שמה דגש על אבחון מדויק, התאמת שגרת טיפוח אישית ושימוש בחומרים הפעילים והמתקדמים ביותר בשוק כדי להגיע לתוצאות אמיתיות לטווח ארוך.</p>
-            <p>אני מאמינה שלכל עור יש את הסיפור שלו, והמטרה שלי היא להחזיר לעור שלך את המראה הבריא, הזוהר והחיוני שמגיע לו.</p>
+            <h2>מומחיות רפואית ומקצועיות ללא פשרות</h2>
+            <p>כשמדובר בעור הפנים שלך, את רוצה לדעת שאת נמצאת בידיים הבטוחות והמקצועיות ביותר. בקליניקה של קטיה נווה הטיפולים מבוצעים תחת אבחון קליני מעמיק, תוך התחשבות במצב הרפואי, תרופות, אורח חיים ואיזון הורמונלי, כדי להבטיח מקסימום תוצאה במינימום סיכון.</p>
+            
+            <ul class="credentials-list">
+                <li>אחות מוסמכת מומחית לפיזיולוגיה של תהליכי ריפוי פצע (40 שנות ניסיון, כולל השתלמויות רפואיות בישראל, ארה"ב, גרמניה וצרפת).</li>
+                <li>קוסמטולוגית חוקרת ובכירה מעל 30 שנה.</li>
+                <li>מומחית לטכנולוגיית פלאזמה פיזית לא חודרנית NIPP.</li>
+                <li>מפתחת שיטות הטיפול המתקדמות MTT ושיטת M.A.O.R.</li>
+            </ul>
         </section>
 
         <!-- חלק תוצאות לפני ואחרי -->
         <section id="results">
-            <h2>תוצאות מהקליניקה (לפני ואחרי)</h2>
+            <h2>תוצאות ותהליכי שיקום מהקליניקה</h2>
             <div class="gallery">
-                <!-- מקרה 1 -->
                 <div class="gallery-item">
-                    <!-- החליפי את src בשם קובץ התמונה האמיתי מהאינסטגרם -->
-                    <img src="before-after1.jpg" alt="טיפול באקנה לפני ואחרי">
-                    <p>טיפול באקנה ואיזון עור שומני</p>
+                    <img src="before-after1.jpeg" alt="שיקום מרקם העור">
+                    <p>חידוש מרקם העור וטשטוש פגמים</p>
                 </div>
-                <!-- מקרה 2 -->
                 <div class="gallery-item">
-                    <img src="before-after2.jpg" alt="טיפול אנטי אייג'ינג לפני ואחרי">
-                    <p>חידוש העור וטשטוש קמטוטים</p>
+                    <img src="before-after2.jpeg" alt="טיפול פלאזמה מתקדמת">
+                    <p>טיפולי פלאזמה סובלימציה מדויקים</p>
                 </div>
             </div>
         </section>
@@ -161,21 +231,29 @@
         <!-- חלק מיקום -->
         <section id="location">
             <h2>מיקום הקליניקה</h2>
-            <p>הקליניקה ממוקמת במיקום נוח ונגיש עם חניה באזור.</p>
+            <p>הטיפולים מתבצעים בקליניקה מקצועית, המצוידת במכשירים בעלי תקנים קפדניים ואישורים מבוקרים.</p>
             <p><strong>כתובת:</strong> [הכניסי כאן את הרחוב והעיר שבה הקליניקה נמצאת]</p>
         </section>
 
-        <!-- חלק התקשרות מהיר -->
+        <!-- חלק התקשרות מהיר ומעודכן -->
         <div class="cta-section">
-            <p>רוצה להתייעץ או לקבוע תור? בלחיצת כפתור אחת את בדרך אליי:</p>
-            <!-- החליפי את מספר הטלפון במספר האמיתי שלה (ללא מקפים) -->
-            <a href="tel:0500000000" class="btn-call">📞 לחצי כאן לחיוג ישיר</a>
+            <p style="font-size: 1.1rem; margin-bottom: 10px; color: #4a4a4a;">לתיאום תור, אבחון העור או שיחת ייעוץ:</p>
+            
+            <div class="btn-group">
+                <!-- כפתור וואטסאפ עם הודעה מוכנה מראש -->
+                <a href="https://wa.me/972524242852?text=%D7%94%D7%99%D7%99%20%D7%A7%D7%98%D7%99%D7%94%D7%9C%2C%20%D7%90%D7%A9%D7%94%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A5%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%A4%D7%A0%D7%99%D7%9D%20%D7%95%D7%A4%D7%9C%D7%90%D7%96%D7%9E%D7%94" target="_blank" class="btn btn-whatsapp">💬 שליחת הודעת WhatsApp</a>
+                
+                <!-- כפתור חיוג ישיר מהנייד -->
+                <a href="tel:0524242852" class="btn btn-call">📱 לחצי כאן לחיוג ישיר</a>
+            </div>
+            
+            <a href="https://www.instagram.com/global_education_katia_naveh" target="_blank" class="social-link">לצפייה בפוסטים נוספים באינסטגרם של קטיה</a>
         </div>
 
     </div>
 
     <footer>
-        <p>© כל הזכויות שמורות לקטיה נווה קוסמטיקה וטיפוח</p>
+        <p>© כל הזכויות שמורות לקטיה נווה — קליניקה לטיפולי עור מתקדמים</p>
     </footer>
 
 </body>
