@@ -6,92 +6,88 @@
     <title>KATIA NAVEH | CLINIC</title>
     <style>
         :root {
-            --primary-gold: #c5a880; 
-            --dark-luxury: #111111;
-            --light-bg: #fdfcfb; 
-            --card-bg: #ffffff;
-            --text-muted: #666666;
+            --rose-nude-bg: #f7ede2; /* רקע פודרה יוקרתי וחמים */
+            --luxury-gold: #c5a880; /* זהב מעודן */
+            --dark-charcoal: #1e1e1e; /* שחור פחם אלגנטי */
+            --pure-white: #ffffff;
+            --text-dark: #2c2c2c;
         }
 
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--light-bg);
-            color: var(--dark-luxury);
+            background-color: var(--rose-nude-bg);
+            color: var(--text-dark);
             margin: 0;
             padding: 0;
             line-height: 1.8;
             text-align: center;
-            letter-spacing: 0.3px;
         }
 
         .container {
             max-width: 650px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
-        /* כותרת יוקרתית באנגלית */
+        /* כותרת מעוצבת ויוקרתית */
         header {
-            padding: 80px 20px 40px 20px;
-            background: var(--light-bg);
+            padding: 60px 20px 30px 20px;
         }
 
         header h1 {
             margin: 0;
-            color: var(--dark-luxury);
-            font-size: 2.8rem;
-            letter-spacing: 4px;
+            color: var(--dark-charcoal);
+            font-size: 3rem;
+            letter-spacing: 6px;
             font-weight: 300;
             text-transform: uppercase;
             font-family: 'Didot', 'Bodoni MT', 'Cinzel', serif, sans-serif;
         }
 
         header .subtitle {
-            font-size: 1.1rem;
-            color: var(--primary-gold);
-            margin-top: 15px;
+            font-size: 1rem;
+            color: var(--dark-charcoal);
+            margin-top: 12px;
             font-weight: 400;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            opacity: 0.8;
         }
 
-        /* עיצוב תמונת פרופיל יוקרתית */
+        /* תמונת הפרופיל של קטיה */
         .profile-container {
-            margin: 20px auto 40px auto;
-            position: relative;
+            margin: 10px auto 30px auto;
             width: 180px;
             height: 180px;
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--primary-gold);
-            padding: 5px;
-            background-color: var(--card-bg);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+            border: 3px solid var(--pure-white);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            background-color: var(--pure-white);
         }
 
         section {
-            background: var(--card-bg);
-            padding: 45px 35px;
-            margin: 30px 0;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-            border: 1px solid #f2eee9;
+            background: var(--pure-white);
+            padding: 40px 30px;
+            margin: 25px 0;
+            border-radius: 16px; /* פינות מעוגלות ורכות */
+            box-shadow: 0 10px 30px rgba(197, 168, 128, 0.1); /* צל מוזהב עדין */
+            border: 1px solid rgba(197, 168, 128, 0.2);
             text-align: right;
         }
 
         h2 {
-            color: var(--dark-luxury);
-            font-weight: 400;
+            color: var(--dark-charcoal);
+            font-weight: 500;
             font-size: 1.4rem;
-            letter-spacing: 0.5px;
             margin-top: 0;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
 
         h2::after {
@@ -99,9 +95,9 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 40px;
-            height: 1px;
-            background-color: var(--primary-gold);
+            width: 50px;
+            height: 2px;
+            background-color: var(--luxury-gold);
         }
 
         section p {
@@ -118,22 +114,22 @@
         .credentials-list li {
             position: relative;
             padding-right: 25px;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             font-weight: 400;
             font-size: 1.05rem;
             color: #333333;
         }
 
         .credentials-list li::before {
-            content: "—";
+            content: "✦";
             position: absolute;
             right: 0;
-            color: var(--primary-gold);
+            color: var(--luxury-gold);
         }
 
-        /* כפתורים ואינסטגרם */
+        /* כפתורי הנעה לפעולה יוקרתיים וצבעוניים */
         .cta-section {
-            padding: 30px 20px;
+            padding: 20px;
         }
 
         .btn-group {
@@ -141,7 +137,7 @@
             flex-direction: column;
             gap: 15px;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .btn {
@@ -149,54 +145,55 @@
             width: 90%;
             max-width: 340px;
             padding: 16px 30px;
-            font-size: 1.05rem;
-            font-weight: 500;
+            font-size: 1.1rem;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 0px; /* קווים ישרים ויוקרתיים */
+            border-radius: 50px; /* כפתורים עגולים ומזמינים */
             transition: all 0.3s ease;
-            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .btn-call {
-            background-color: var(--dark-luxury);
-            color: white;
+            background-color: var(--dark-charcoal);
+            color: var(--pure-white);
             border: 1px solid var(--dark-luxury);
         }
 
         .btn-call:hover {
-            background-color: transparent;
-            color: var(--dark-luxury);
+            background-color: #333333;
+            transform: translateY(-2px);
         }
 
         .btn-whatsapp {
-            background-color: transparent;
-            color: #25D366;
-            border: 1px solid #25D366;
+            background-color: #25D366;
+            color: var(--pure-white);
         }
 
         .btn-whatsapp:hover {
-            background-color: #25D366;
-            color: white;
+            background-color: #20ba56;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
         }
 
         .btn-instagram {
-            background-color: transparent;
+            background-color: var(--pure-white);
             color: #e1306c;
-            border: 1px solid #e1306c;
+            border: 2px solid #e1306c;
         }
 
         .btn-instagram:hover {
             background-color: #e1306c;
-            color: white;
+            color: var(--pure-white);
+            transform: translateY(-2px);
         }
 
         footer {
             padding: 40px 20px;
-            color: #a0a0a0;
+            color: var(--dark-charcoal);
             font-size: 0.8rem;
             letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-top: 60px;
+            opacity: 0.6;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -209,49 +206,49 @@
 
     <div class="container">
 
-        <!-- תמונת הפרופיל של קטיה -->
+        <!-- אזור התמונה של קטיה -->
         <div class="profile-container">
-            <img src="katia.jpeg" alt="Katia Naveh" class="profile-img" onerror="this.style.display='none'">
+            <img src="katia.jpeg" alt="Katia Naveh" class="profile-img">
         </div>
 
         <!-- אודות -->
         <section id="about">
             <h2>מומחיות רפואית ומקצועיות ללא פשרות</h2>
-            <p>כשמדובר בעור הפנים שלך, את רוצה לדעת שאת נמצאת בידיים הבטוחות והמקצועיות ביותר. בקליניקה של קטיה נווה הטיפולים מבוצעים תחת אבחון קליני מעמיק, תוך התחשבות במצב הרפואי, תרופות, אורח חיים ואיזון הורמונלי, כדי להבטיח מקסימום תוצאה במינימום סיכון[cite: 1].</p>
+            <p>כשמדובר בעור הפנים שלך, את רוצה לדעת שאת נמצאת בידיים הבטוחות והמקצועיות ביותר. בקליניקה של קטיה נווה הטיפולים מבוצעים תחת אבחון קליני מעמיק, תוך התחשבות במצב הרפואי, תרופות, אורח חיים ואיזון הורמונלי, כדי להבטיח מקסימום תוצאה במינימום סיכון.</p>
             
             <ul class="credentials-list">
-                <li>אחות מוסמכת מומחית לפיזיולוגיה של תהליכי ריפוי פצע (40 שנות ניסיון, כולל השתלמויות רפואיות בישראל, ארה"ב, גרמניה וצרפת)[cite: 1].</li>
-                <li>קוסמטולוגית חוקרת ובכירה מעל 30 שנה[cite: 1].</li>
-                <li>מומחית לטכנולוגיית פלאזמה פיזית לא חודרנית NIPP[cite: 1].</li>
-                <li>מפתחת שיטות הטיפול המתקדמות MTT ושיטת M.A.O.R.[cite: 1].</li>
+                <li>אחות מוסמכת מומחית לפיזיולוגיה של תהליכי ריפוי פצע (40 שנות ניסיון, כולל השתלמויות רפואיות בישראל, ארה"ב, גרמניה וצרפת).</li>
+                <li>קוסמטולוגית חוקרת ובכירה מעל 30 שנה.</li>
+                <li>מומחית לטכנולוגיית פלאזמה פיזית לא חודרנית NIPP.</li>
+                <li>מפתחת שיטות הטיפול המתקדמות MTT ושיטת M.A.O.R.</li>
             </ul>
         </section>
 
-        <!-- מיקום מעודכן ומדויק -->
+        <!-- מיקום מעודכן -->
         <section id="location">
             <h2>הקליניקה</h2>
-            <p>הטיפולים מתבצעים בקליניקה מקצועית ופרטית, המצוידת במכשירים בעלי תקנים קפדניים ואישורים מבוקרים[cite: 1].</p>
-            <p><strong>מיקום:</strong> פתח תקווה, מוטה גור 9</p>
+            <p>הטיפולים מתבצעים בקליניקה מקצועית ופרטית, המצוידת במכשירים בעלי תקנים קפדניים ואישורים מבוקרים.</p>
+            <p><strong>כתובת:</strong> פתח תקווה, מוטה גור 9</p>
         </section>
 
         <!-- יצירת קשר ואינסטגרם -->
         <div class="cta-section">
             <div class="btn-group">
                 <!-- כפתור חיוג -->
-                <a href="tel:0524242852" class="btn btn-call">📱 לחצי כאן לחיוג ישיר</a>[cite: 1]
+                <a href="tel:0524242852" class="btn btn-call">📱 לחצי כאן לחיוג ישיר</a>
 
                 <!-- כפתור וואטסאפ -->
-                <a href="https://wa.me/972524242852?text=%D7%94%D7%99%D7%99%20%D7%A7%D7%98%D7%99%D7%94%2C%20%D7%90%D7%A9%D7%97%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A5%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%A4%D7%A0%D7%99%D7%9D%20%D7%95%D7%A4%D7%9C%D7%90%D7%96%D7%9E%D7%94" target="_blank" class="btn btn-whatsapp">💬 הודעת WhatsApp מהירה</a>[cite: 1]
+                <a href="https://wa.me/972524242852?text=%D7%94%D7%99%D7%99%20%D7%A7%D7%98%D7%99%D7%94%2C%20%D7%90%D7%A9%D7%97%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A5%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%A4%D7%A0%D7%99%D7%9D%20%D7%95%D7%A4%D7%9C%D7%90%D7%96%D7%9E%D7%94" target="_blank" class="btn btn-whatsapp">💬 הודעת WhatsApp מהירה</a>
                 
                 <!-- כפתור אינסטגרם מעוצב -->
-                <a href="https://www.instagram.com/global_education_katia_naveh" target="_blank" class="btn btn-instagram">📸 עקבי באינסטגרם: global_education_katia_naveh</a>[cite: 1]
+                <a href="https://www.instagram.com/global_education_katia_naveh" target="_blank" class="btn btn-instagram">📸 עקבי באינסטגרם: global_education_katia_naveh</a>
             </div>
         </div>
 
     </div>
 
     <footer>
-        <p>© KATIA NAVEH — ADVANCED SKIN CLINIC</p>[cite: 1]
+        <p>© KATIA NAVEH — ADVANCED SKIN CLINIC</p>
     </footer>
 
 </body>
