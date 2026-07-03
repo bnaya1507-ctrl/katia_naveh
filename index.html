@@ -55,11 +55,14 @@
             margin: 10px auto 30px auto;
             width: 180px;
             height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .profile-img {
-            width: 100%;
-            height: 100%;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--pure-white);
@@ -203,7 +206,7 @@
     <div class="container">
 
         <div class="profile-container">
-            <img src="katia.jpeg" alt="Katia Naveh" class="profile-img">
+            <img src="katia.jpeg" alt="Katia Naveh" class="profile-img" onerror="this.style.opacity='0'; this.style.height='0'; this.parentNode.style.height='0'; this.parentNode.style.margin='0';">
         </div>
 
         <section id="about">
@@ -211,31 +214,31 @@
             <p>כשמדובר בעור הפנים שלך, את רוצה לדעת שאת נמצאת בידיים הבטוחות והמקצועיות ביותר. בקליניקה של קטיה נווה הטיפולים מבוצעים תחת אבחון קליני מעמיק, תוך התחשבות במצב הרפואי, תרופות, אורח חיים ואיזון הורמונלי, כדי להבטיח מקסימום תוצאה במינימום סיכון.</p>
             
             <ul class="credentials-list">
-                <li>אחות מוסמכת מומחית לפיזיולוגיה של תהליכי ריפוי פצע (40 שנות ניסיון, כולל השתלמויות רפואיות בישראל, ארה"ב, גרמניה וצרפת)[cite: 1].</li>
-                <li>קוסמטולוגית חוקרת ובכירה מעל 30 שנה[cite: 1].</li>
-                <li>מומחית לטכנולוגיית פלאזמה פיזית לא חודרנית NIPP[cite: 1].</li>
-                <li>מפתחת שיטות הטיפול המתקדמות MTT ושיטת M.A.O.R.[cite: 1]</li>
+                <li>אחות מוסמכת מומחית לפיזיולוגיה של תהליכי ריפוי פצע (40 שנות ניסיון, כולל השתלמויות רפואיות בישראל, ארה"ב, גרמניה וצרפת).</li>
+                <li>קוסמטולוגית חוקרת ובכירה מעל 30 שנה.</li>
+                <li>מומחית לטכנולוגיית פלאזמה פיזית לא חודרנית NIPP.</li>
+                <li>מפתחת שיטות הטיפול המתקדמות MTT ושיטת M.A.O.R.</li>
             </ul>
         </section>
 
         <section id="location">
             <h2>הקליניקה</h2>
-            <p>הטיפולים מתבצעים בקליניקה מקצועית ופרטית, המצוידת במכשירים בעלי תקנים קפדניים ואישורים מבוקרים[cite: 1].</p>
-            <p><strong>כתובת:</strong> פתח תקווה, מוטה גור 9[cite: 1]</p>
+            <p>הטיפולים מתבצעים בקליניקה מקצועית ופרטית, המצוידת במכשירים בעלי תקנים קפדניים ואישורים מבוקרים.</p>
+            <p><strong>כתובת:</strong> פתח תקווה, מוטה גור 9</p>
         </section>
 
         <div class="cta-section">
             <div class="btn-group">
-                <a href="tel:0524242852" class="btn btn-call">📱 לחצי כאן לחיוג ישיר</a>[cite: 1]
-                <a href="https://wa.me/972524242852?text=%D7%94%D7%99%D7%99%20%D7%A7%D7%98%D7%99%D7%94%2C%20%D7%90%D7%A9%D7%97%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A5%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%A4%D7%A0%D7%99%D7%9D%20%D7%95%D7%A4%D7%9C%D7%90%D7%96%D7%9E%D7%94" target="_blank" class="btn btn-whatsapp">💬 הודעת WhatsApp מהירה</a>[cite: 1]
-                <a href="https://www.instagram.com/global_education_katia_naveh" target="_blank" class="btn btn-instagram">📸 עקבי באינסטגרם: global_education_katia_naveh</a>[cite: 1]
+                <a href="tel:0524242852" class="btn btn-call">📱 לחצי כאן לחיוג ישיר</a>
+                <a href="https://wa.me/972524242852?text=%D7%94%D7%99%D7%99%20%D7%A7%D7%98%D7%99%D7%94%2C%20%D7%90%D7%A9%D7%97%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A5%D7%9C%20%D7%98%D7%99%D7%A4%D7%95%D7%9C%20%D7%A4%D7%A0%D7%99%D7%9D%20%D7%95%D7%A4%D7%9C%D7%90%D7%96%D7%9E%D7%94" target="_blank" class="btn btn-whatsapp">💬 הודעת WhatsApp מהירה</a>
+                <a href="https://www.instagram.com/global_education_katia_naveh" target="_blank" class="btn btn-instagram">📸 עקבי באינסטגרם: global_education_katia_naveh</a>
             </div>
         </div>
 
     </div>
 
     <footer>
-        <p>© KATIA NAVEH — ADVANCED SKIN CLINIC</p>[cite: 1]
+        <p>© KATIA NAVEH — ADVANCED SKIN CLINIC</p>
     </footer>
 
 </body>
