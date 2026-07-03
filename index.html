@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קטיה נווה - קליניקה לטיפולי עור מתקדמים</title>
+    <style>
+        :root {
+            --primary-color: #d4af37; /* צבע זהב מעודן */
+            --bg-color: #faf8f5; /* צבע רקע קרם בהיר ונקי */
+            --text-color: #333;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        section {
+            background: #fff;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* עיצוב גלריית לפני ואחרי */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .gallery-item {
+            background: var(--bg-color);
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .gallery-item p {
+            margin: 10px 0 0 0;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* עיצוב כפתור ההתקשרות */
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .btn-call {
+            display: inline-block;
+            background-color: #25D366; /* ירוק בולט (או שנה לזהב/שחור לפי הטעם) */
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+
+        .btn-call:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>קטיה נווה | Katia Naveh</h1>
+        <p>טיפולי פנים מתקדמים, אקנה, אנטי-אייג'ינג ושיקום העור בהתאמה אישית</p>
+    </header>
+
+    <div class="container">
+
+        <!-- חלק אודות -->
+        <section id="about">
+            <h2>מי אני ומה אני עושה</h2>
+            <p>נעים להכיר, אני קטיה, קוסמטיקאית ומטפלת בעור. בקליניקה שלי אני שמה דגש על אבחון מדויק, התאמת שגרת טיפוח אישית ושימוש בחומרים הפעילים והמתקדמים ביותר בשוק כדי להגיע לתוצאות אמיתיות לטווח ארוך.</p>
+            <p>אני מאמינה שלכל עור יש את הסיפור שלו, והמטרה שלי היא להחזיר לעור שלך את המראה הבריא, הזוהר והחיוני שמגיע לו.</p>
+        </section>
+
+        <!-- חלק תוצאות לפני ואחרי -->
+        <section id="results">
+            <h2>תוצאות מהקליניקה (לפני ואחרי)</h2>
+            <div class="gallery">
+                <!-- מקרה 1 -->
+                <div class="gallery-item">
+                    <!-- החליפי את src בשם קובץ התמונה האמיתי מהאינסטגרם -->
+                    <img src="before-after1.jpg" alt="טיפול באקנה לפני ואחרי">
+                    <p>טיפול באקנה ואיזון עור שומני</p>
+                </div>
+                <!-- מקרה 2 -->
+                <div class="gallery-item">
+                    <img src="before-after2.jpg" alt="טיפול אנטי אייג'ינג לפני ואחרי">
+                    <p>חידוש העור וטשטוש קמטוטים</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- חלק מיקום -->
+        <section id="location">
+            <h2>מיקום הקליניקה</h2>
+            <p>הקליניקה ממוקמת במיקום נוח ונגיש עם חניה באזור.</p>
+            <p><strong>כתובת:</strong> [הכניסי כאן את הרחוב והעיר שבה הקליניקה נמצאת]</p>
+        </section>
+
+        <!-- חלק התקשרות מהיר -->
+        <div class="cta-section">
+            <p>רוצה להתייעץ או לקבוע תור? בלחיצת כפתור אחת את בדרך אליי:</p>
+            <!-- החליפי את מספר הטלפון במספר האמיתי שלה (ללא מקפים) -->
+            <a href="tel:0500000000" class="btn-call">📞 לחצי כאן לחיוג ישיר</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© כל הזכויות שמורות לקטיה נווה קוסמטיקה וטיפוח</p>
+    </footer>
+
+</body>
+</html>
